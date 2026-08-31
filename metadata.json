@@ -1,0 +1,7 @@
+{
+  "name": "AI GrowthLab",
+  "description": "Practical AI websites, business automation, customer interaction analytics and AI solutions for growing businesses by Shailendra Mishra.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
