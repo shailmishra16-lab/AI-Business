@@ -35,7 +35,7 @@ export const SolutionsPage: React.FC<SolutionsPageProps> = ({ onOpenLeadModal, o
         'Interactive Quote & ROI Estimators for high-ticket sales',
         'Customer-facing Diagnosis & Symptom/Requirement Checkers',
         'Custom Admin & Telecalling Operation Portals',
-        'Serverless Full-Stack TypeScript Architecture on Cloud Run',
+        'Production-grade High-Performance Architecture on Cloud Run',
       ],
       demoLink: '/demos/interaction-analyzer',
       demoTitle: 'Try Interaction Analyzer Demo',

@@ -84,70 +84,62 @@ export interface LeadHealthResult {
   isDemo?: boolean;
 }
 
-export interface SalesCoachScoreItem {
-  category: string;
-  score: number; // 0 - 10
-  feedback: string;
-  quoteObserved?: string;
+export interface SalesCoachParameter {
+  name: string;
+  score: number;
+  weight: string;
+  strengths: string;
+  weaknesses: string;
+  coachingTip: string;
 }
 
 export interface SalesCoachResult {
-  overallScore: number; // 0 - 100
-  rating: 'Exceptional' | 'Competent' | 'Needs Coaching' | 'Critical Risk';
-  scores: {
-    greeting: SalesCoachScoreItem;
-    requirementDiscovery: SalesCoachScoreItem;
-    questionQuality: SalesCoachScoreItem;
-    productExplanation: SalesCoachScoreItem;
-    objectionHandling: SalesCoachScoreItem;
-    empathy: SalesCoachScoreItem;
-    closingAttempt: SalesCoachScoreItem;
-    nextStepCommitment: SalesCoachScoreItem;
-  };
-  whatWasDoneWell: string[];
-  areasForImprovement: string[];
-  coachingRecommendations: {
-    skillArea: string;
-    advice: string;
-    drillOrExercise: string;
+  overallScore: number;
+  performanceRating: string;
+  summary: string;
+  parameterEvaluations: SalesCoachParameter[];
+  strongPoints: string[];
+  improvementAreas: string[];
+  coachingDrills: {
+    title: string;
+    focus: string;
+    drillSteps: string[];
   }[];
-  suggestedBetterResponse: {
-    originalSegment: string;
-    improvedVersion: string;
-    explanation: string;
+  scriptRewrite: {
+    originalContext: string;
+    recommendedDialogue: string;
   };
   isDemo?: boolean;
 }
 
-export interface ReviewItem {
-  id: string;
-  rating: number; // 1 - 5
-  source: string;
-  date: string;
-  author: string;
-  text: string;
+export interface ReviewCategoryFeedback {
+  category: string;
+  sentimentScore: number;
+  positiveCount: number;
+  negativeCount: number;
+  keyFeedback: string;
+}
+
+export interface ReviewManagementAction {
+  priority: string;
+  title: string;
+  description: string;
+  impact: string;
+  expectedRoi: string;
 }
 
 export interface ReviewAnalysisResult {
-  overallSentiment: {
-    score: number; // e.g. 4.1/5 or 72%
-    distribution: { positive: number; neutral: number; negative: number };
+  overallRating: number;
+  totalReviewsAnalyzed: number;
+  sentimentBreakdown: {
+    positive: number;
+    neutral: number;
+    negative: number;
   };
-  positiveThemes: { theme: string; mentions: number }[];
-  negativeThemes: { theme: string; mentions: number }[];
-  repeatedComplaints: string[];
-  categoryBreakdown: {
-    staffIssues: { count: number; examples: string[] };
-    priceIssues: { count: number; examples: string[] };
-    productIssues: { count: number; examples: string[] };
-    serviceIssues: { count: number; examples: string[] };
-  };
-  top5ManagementActions: {
-    action: string;
-    targetArea: string;
-    priority: 'Immediate (P1)' | 'Short-term (P2)' | 'Medium-term (P3)';
-    expectedRoi: string;
-  }[];
+  categoryBreakdown: ReviewCategoryFeedback[];
+  positiveHighlights: string[];
+  frequentComplaints: string[];
+  prioritizedManagementActions: ReviewManagementAction[];
   isDemo?: boolean;
 }
 
@@ -161,20 +153,34 @@ export interface ChatMessage {
 }
 
 export interface BusinessScanInput {
+  industry?: string;
   businessType: string;
-  currentProcess: string;
-  biggestProblem: string;
-  monthlyEnquiryVolume: string;
-  contactChannels: string[];
+  monthlyEnquiries?: number | string;
+  avgDealValue?: number | string;
+  bottlenecks?: string[];
+  currentProcess?: string;
+  biggestProblem?: string;
+  monthlyEnquiryVolume?: string;
+  contactChannels?: string[];
 }
 
 export interface BusinessScanResult {
+  industry?: string;
   businessType: string;
-  urgencyLevel: 'High' | 'Medium' | 'Strategic';
-  estimatedHoursSavedMonthly: number;
-  projectedConversionIncrease: string;
-  diagnosticSummary: string;
-  customRoadmap: {
+  estimatedMonthlyHoursSaved?: number;
+  estimatedRevenueUpside?: number;
+  projectedConversionLift?: string;
+  leadLeakageSeverity?: string;
+  implementationRoadmap?: {
+    phase: string;
+    objective: string;
+    deliverables: string[];
+  }[];
+  urgencyLevel?: 'High' | 'Medium' | 'Strategic';
+  estimatedHoursSavedMonthly?: number;
+  projectedConversionIncrease?: string;
+  diagnosticSummary?: string;
+  customRoadmap?: {
     phase: string;
     timeline: string;
     action: string;

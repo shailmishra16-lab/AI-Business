@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Sparkles,
   ArrowRight,
@@ -16,7 +16,8 @@ import {
   ShieldCheck,
   Mail,
   Phone,
-  ArrowUpRight
+  ArrowUpRight,
+  UserCheck
 } from 'lucide-react';
 import { OWNER_INFO } from '../../data/mockData';
 
@@ -127,13 +128,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenLead
 
               {/* Shailendra Profile Card */}
               <div className="flex items-center gap-4 pt-1">
-                <div className="w-16 h-16 rounded-2xl overflow-hidden border border-white/15 bg-slate-900 shrink-0 shadow-md">
-                  <img
-                    src="/assets/shailendra_mishra.jpg"
-                    alt="Shailendra Mishra"
-                    className="w-full h-full object-cover object-top"
-                    referrerPolicy="no-referrer"
-                  />
+                <div className="w-14 h-14 rounded-2xl border border-indigo-500/30 bg-gradient-to-br from-indigo-950 via-slate-900 to-slate-950 flex items-center justify-center shrink-0 shadow-lg shadow-indigo-950/40 relative group-hover:border-indigo-500/50 transition-colors">
+                  <span className="text-lg font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-indigo-300 via-white to-cyan-300 tracking-wider font-mono">
+                    SM
+                  </span>
+                  <div className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-emerald-500 border-2 border-[#05070a] flex items-center justify-center">
+                    <UserCheck className="w-3 h-3 text-black" />
+                  </div>
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-white leading-snug">{OWNER_INFO.name}</h3>

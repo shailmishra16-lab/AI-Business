@@ -6,47 +6,57 @@ export const OWNER_INFO = {
   phone: "+91 90254 41583",
   whatsappNumber: "+919025441583",
   whatsappLink: "https://wa.me/919025441583?text=Hi%20Shailendra%2C%20I%20visited%20AI%20GrowthLab%20and%20would%20like%20to%20discuss%20an%20AI%20solution%20for%20my%20business.",
-  title: "AI Solutions Architect & Customer Experience Consultant",
+  title: "Founder & AI Builder @ AI GrowthLab | Interaction Analytics, CX & Quality Transformation Leader",
   experienceYears: "15+",
   tagline: "Practical AI. Real Business Problems. Measurable Action.",
-  profileImage: "/assets/shailendra_mishra.jpg",
-  bio: "I bring 15+ years of hands-on experience in customer experience, quality, speech analytics and customer interaction analysis. I'm now combining that deep domain foundation with modern AI, automation, and full-stack web engineering to build practical, measurable solutions that solve real business bottlenecks.",
+  profileImage: "/shailendra_mishra.jpg",
+  bio: "With over 15 years of deep domain experience in Interaction Analytics, CX & Quality Transformation, and customer conversation intelligence, I combine battle-tested operational frameworks with modern generative AI and workflow automation to eliminate business friction and recover revenue.",
   skills: [
-    "Generative AI & LLMs",
-    "Speech Analytics & QA",
-    "Customer Interaction Analytics",
-    "WhatsApp Automation",
-    "Lead Funnel Optimization",
-    "Power BI & Analytics",
-    "Quality Management (Six Sigma)",
-    "Full-Stack Web Development",
-    "Sales Coaching Architectures"
+    "Interaction Analytics, CX & Quality Transformation",
+    "Customer Conversation & Speech Analytics",
+    "Generative AI & Prompt Architecture",
+    "Root Cause Analysis & Gemba Kaizen",
+    "Quality Management Systems (QMS)",
+    "Power BI & Executive Dashboards",
+    "WhatsApp Intake & Workflow Automation",
+    "Sales Coaching & Quality Scorecards",
+    "Omnichannel Customer Experience (CX) Architecture"
   ],
   journeyTimeline: [
     {
-      title: "Speech & Customer Interaction Analytics",
-      description: "15+ years evaluating 100,000+ customer calls, chats, and omnichannel interactions across enterprise support and sales operations.",
-      badge: "Foundation"
+      period: "2011 – 2015",
+      title: "Quality Management & Process Improvement",
+      role: "Senior Executive – Quality & Process Excellence",
+      description: "Implemented quality management systems (QMS), Root Cause Analysis (RCA), Gemba Kaizen methodologies, and end-to-end continuous process improvement across operational teams.",
+      badge: "QMS & Kaizen"
     },
     {
-      title: "Quality Management & CX Strategy",
-      description: "Designing end-to-end quality scorecards, customer journey maps, CSAT/NPS improvement frameworks, and SLA monitoring.",
-      badge: "Quality Leadership"
+      period: "2016 – 2020",
+      title: "Customer Conversation & Quality Intelligence",
+      role: "Quality Intelligence & Conversation Audit Specialist",
+      description: "Conducted in-depth conversation audits, speech acoustics analysis, customer sentiment evaluation, and standardized agent scorecard frameworks across high-volume contact centers.",
+      badge: "Speech & QA"
     },
     {
-      title: "Generative AI & Prompt Engineering",
-      description: "Pioneering LLM-driven structured sentiment classification, automated QA audits, and context-aware business agents.",
-      badge: "AI Modernization"
+      period: "2021 – 2026",
+      title: "CX Strategy & Quality Leadership",
+      role: "CX Strategy & Quality Operations Leader",
+      description: "Led omnichannel customer experience quality initiatives, root-cause defect elimination, customer sentiment indexing, and executive reporting along with real-time Power BI Dashboards.",
+      badge: "CX Leadership"
     },
     {
-      title: "WhatsApp & Workflow Automation",
-      description: "Building zero-latency lead intake workflows, webhook dispatches, automated CRM sync, and multi-touch nurture cadences.",
-      badge: "Automation"
+      period: "2026 – Present",
+      title: "Founder & AI Builder @ AI GrowthLab",
+      role: "Founder & Principal AI Solutions Architect",
+      description: "Architecting custom conversational bots, speech QA platforms, and automated revenue leakage recovery engines for mid-market businesses, dealerships, clinics, and education institutes.",
+      badge: "AI GrowthLab"
     },
     {
-      title: "AI GrowthLab: Practical Business Solutions",
-      description: "Deploying end-to-end AI portals, interaction analyzers, and lead recovery engines for SMBs and growing enterprises.",
-      badge: "Active Showcase"
+      period: "2026 – Present",
+      title: "Applied AI & Operational Automation",
+      role: "Applied AI Systems Architect",
+      description: "Architecting custom prompt pipelines, automated WhatsApp intake workflows, CRM integrations, and executive decision-support AI tools.",
+      badge: "Applied AI"
     }
   ]
 };
